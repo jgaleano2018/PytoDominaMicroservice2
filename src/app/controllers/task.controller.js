@@ -22,6 +22,8 @@ export const postTask = (req, res, next) => {
 
 // Retrieve all Tasks from the database.
 export const getTask = (req, res, next) => {
+
+    console.log("RESPONSEEEEEEEEE:::::: 122222222:: ");
     
     db.query('SELECT * FROM task', function(error, response, fields) {
         if (error) throw error;
@@ -33,6 +35,8 @@ export const getTask = (req, res, next) => {
 
 // Find a single Task with an id
 export const getTaskById = (req, res, next) => {
+
+    console.log("RESPONSEEEEEEEEE:::::: 122222222:: ");
 
     const { id } = req.params;
 
